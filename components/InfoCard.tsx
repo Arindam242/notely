@@ -2,15 +2,22 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons';
 
-const InfoCard =() =>{
+interface props{
+    color: string;
+    title: string;
+    datetime: string;
+}
+
+const InfoCard =(props:props) =>{
+    const {color,title,datetime} = props;
     return (
         <View style={styles.info}>
-            <View style={styles.circle}>
+            <View style={[styles.circle,{backgroundColor:color,}]}>
                 <Ionicons name="notifications" size={24} color="white" />
             </View>
             <View>
-                <Text style={styles.maintext}>Summer Vacation</Text>
-                <Text style={styles.text}>12 july 2021 ,07:23 PM</Text>
+                <Text style={styles.maintext}>{title}</Text>
+                <Text style={styles.text}>{datetime}</Text>
             </View>
         </View>
     )
@@ -32,7 +39,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent:"center",
         borderRadius:50,
-        backgroundColor:"#4DC992",
+        
         marginRight:10
     },
     maintext:{

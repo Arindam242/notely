@@ -5,7 +5,7 @@ import InfoCard from './InfoCard';
 const Notes =() =>{
     return (
         <View style={styles.container}>
-            <InfoCard/>
+            <InfoCard title={"My Exam"} datetime={"1 july 2021 , 07:23 AM "} color="#6273ED"/>
             <Text style={styles.content}>
                 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
             </Text>
